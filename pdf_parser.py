@@ -96,6 +96,10 @@ FIELDS = {
     "nr_umowy_generalnej_pzu":   (r"nr\s+umowy\s+generalnej\s+PZU:?\s*([A-Z0-9]+)", _F, None),
     "nr_umowy_generalnej_klienta": (r"nr\s+umowy\s+generalnej\s+klienta:?\s*([A-Z0-9]+)", _F, None),
 
+    # --- Pojazd (авто) -----------------------------------------------------
+    "nr_rejestracyjny":          (r"nr\s+rejestracyjny:?\s*([A-Z0-9]{4,10})", _F, None),
+    "vin":                       (r"VIN:?\s*([A-HJ-NPR-Z0-9]{17})", _F, None),
+
     # --- Ubezpieczający (страхувальник) -----------------------------------
     "ubezpieczajacy_nazwa":      (r"Ubezpieczaj[ąa]cy\s*(.+?)\s*REGON", _FD, _clean),
     "ubezpieczajacy_regon":      (r"REGON:?\s*(\d{8,14})", _F, None),
